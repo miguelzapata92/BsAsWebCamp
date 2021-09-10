@@ -121,6 +121,11 @@ html {
 
 .body {
     background-color: #ccc;
+    font-family: 'PT Sans', sans-serif;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
 }
 
 
@@ -180,6 +185,16 @@ div.site-information p {
 
 div.site-information p i {
     color: rgb(246, 61, 4);
+    font-size: 2em;
+}
+
+p.slogan p {
+    font-size: 6em;
+    text-transform: none!important;
+}
+
+p.slogan span {
+    font-weight: bold;
 }
 
 p.date {
@@ -189,6 +204,20 @@ p.date {
 p.location {
     float: right;
     text-align: right;
+}
+
+h1.name-website {
+    font-size: 6vw;
+    font-family: 'PT Sans', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    h1.name-website {
+        text-transform: uppercase;
+        font-size: 11vw;
+        margin: 0;
+        line-height: 1;
+    }
 }
 
 
