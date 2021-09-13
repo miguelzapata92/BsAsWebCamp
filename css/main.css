@@ -124,8 +124,34 @@ html {
     font-family: 'PT Sans', sans-serif;
 }
 
+
+/** Globales **/
+
 h2 {
     font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 468px) {
+    .container {
+        max-width: 95%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 90%;
+    }
 }
 
 
@@ -217,6 +243,67 @@ h1.name-website {
         font-size: 11vw;
         margin: 0;
         line-height: 1;
+    }
+}
+
+
+/**Barra**/
+
+div.main-menu {
+    background-color: #353535;
+    padding: 20px 0;
+}
+
+div.logo {
+    width: 67%;
+}
+
+div.logo img {
+    width: 100%;
+    float: left;
+}
+
+@media only screen and (min-width: 768px) {
+    div.logo {
+        width: 33%;
+    }
+}
+
+
+/**Navegación Principal**/
+
+nav.main-navigation {
+    display: none;
+    width: 100%;
+}
+
+nav.main-navigation a {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    transition: all .3s ease;
+}
+
+nav.main-navigation a:hover {
+    background-color: #fe4918;
+}
+
+@media only screen and (min-width: 768px) {
+    nav.main-navigation {
+        width: 67%;
+        float: right;
+        text-align: right;
+        display: block;
+    }
+    nav.main-navigation a {
+        padding: 25px 10px;
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        margin: 0 10px 0 0;
     }
 }
 
