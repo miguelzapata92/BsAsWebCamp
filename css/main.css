@@ -284,7 +284,16 @@ nav.main-navigation a {
     text-transform: uppercase;
     text-decoration: none;
     display: block;
-    transition: all .3s ease;
+    transition: all .5s ease;
+}
+
+nav.main-navigation a:last-child {
+    border: 2px solid #fe4918;
+    color: #fe4918;
+}
+
+nav.main-navigation a:last-child:hover {
+    color: #ffffff;
 }
 
 nav.main-navigation a:hover {
