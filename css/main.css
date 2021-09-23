@@ -135,25 +135,25 @@ h2 {
     font-family: 'Oswald', sans-serif;
 }
 
-.container {
+.contenedor {
     max-width: 95%;
     margin: 0 auto;
 }
 
 @media only screen and (min-width: 468px) {
-    .container {
+    .contenedor {
         max-width: 95%;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .container {
+    .contenedor {
         max-width: 90%;
     }
 }
 
 @media only screen and (min-width: 992px) {
-    .container {
+    .contenedor {
         max-width: 90%;
     }
 }
@@ -194,43 +194,43 @@ div.hero {
 }
 
 @media only screen and (min-width: 768px) {
-    div.header-content {
+    div.contenido-header {
         padding-top: 10px;
     }
 }
 
-.header-content {
+.contenido-header {
     padding-top: 40px;
 }
 
-nav.social-networks {
+nav.redes-sociales {
     text-align: center;
 }
 
-nav.social-networks a {
+nav.redes-sociales a {
     color: #ffffff;
     font-size: 2em;
     margin-right: 20px;
 }
 
-nav.social-networks a:last-child {
+nav.redes-sociales a:last-child {
     margin-right: 0;
 }
 
-div.site-information {
+div.informacion-sitio {
     text-align: center;
     color: #ffffff;
 }
 
 @media only screen and (min-width: 768px) {
-    div.site-information {
+    div.informacion-sitio {
         width: 70%;
         margin: 0 auto;
         padding-top: 20px;
     }
 }
 
-div.site-information p {
+div.informacion-sitio p {
     margin: 0;
     display: inline;
     font-size: 20px;
@@ -238,7 +238,7 @@ div.site-information p {
     padding-top: 40px;
 }
 
-div.site-information p i {
+div.informacion-sitio p i {
     color: rgb(246, 61, 4);
     font-size: 2em;
 }
@@ -278,7 +278,7 @@ h1.name-website {
 
 /**Barra**/
 
-div.main-menu {
+div.menu-principal {
     background-color: #353535;
     padding: 20px 0;
 }
@@ -301,7 +301,7 @@ div.logo img {
 
 /**Navegación Principal**/
 
-nav.main-navigation a {
+nav.navegacion-principal a {
     font-family: 'Oswald', sans-serif;
     color: #ffffff;
     font-size: 1.3em;
@@ -314,27 +314,27 @@ nav.main-navigation a {
     margin-bottom: 20px;
 }
 
-nav.main-navigation a:last-child {
+nav.navegacion-principal a:last-child {
     border: 2px solid #fe4918;
     color: #fe4918;
 }
 
-nav.main-navigation a:last-child:hover {
+nav.navegacion-principal a:last-child:hover {
     color: #ffffff;
 }
 
-nav.main-navigation a:hover {
+nav.navegacion-principal a:hover {
     background-color: #fe4918;
 }
 
 @media only screen and (min-width: 768px) {
-    nav.main-navigation {
+    nav.navegacion-principal {
         width: 67%;
         float: right;
         text-align: right;
         display: block;
     }
-    nav.main-navigation a {
+    nav.navegacion-principal a {
         padding: 25px 10px;
         display: inline-block;
         width: auto;
@@ -370,6 +370,44 @@ div.mobile-menu span {
     background-color: #ffffff;
     display: block;
 }
+
+section.programa {
+    position: relative;
+}
+
+div.contenedor-video {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+div.contenido-programa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+div.programa-evento {
+    background-color: rgba(255, 255, 255, .8);
+    padding: 15px;
+    margin-top: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+    div.programa-evento {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    div.programa-evento {
+        width: 50%;
+    }
+}
+
+
+/**Talleres**/
 
 
 /* ==========================================================================
