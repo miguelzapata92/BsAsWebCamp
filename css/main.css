@@ -183,6 +183,34 @@ h2::after {
     text-align: center;
 }
 
+h3 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.8em;
+    color: #fe4918;
+    margin: 0;
+}
+
+.button {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #fe4918;
+    color: #ffffff;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all .3s;
+}
+
+.button:hover {
+    background-color: #e33000;
+}
+
+.float-right {
+    float: right;
+}
+
 
 /** Header **/
 
@@ -437,10 +465,29 @@ nav.menu-programa a {
     }
 }
 
-nav.menu-programa a i {
+nav.menu-programa a i,
+div.detalle-evento p i {
     color: #fe4918;
     margin-right: 10px;
     font-size: 1.6em;
+}
+
+
+/**Detalle Evento**/
+
+div.detalle-evento {
+    margin-top: 10px;
+    border-bottom: solid 2px black;
+    padding: 0 20px;
+}
+
+div.detalle-evento:nth-child(2) {
+    border: none;
+}
+
+div.detalle-evento p {
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
 
