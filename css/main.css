@@ -554,6 +554,17 @@ div.invitado:hover p {
 }
 
 
+/**Contador**/
+
+div.contador {
+    position: relative;
+}
+
+div.contador::before {
+    background-image: url(../bg-resumen);
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
