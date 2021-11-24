@@ -678,6 +678,49 @@ div.mapa {
 }
 
 
+/**Testimoniales**/
+
+div.testimoniales {
+    padding-bottom: 20px;
+}
+
+div.testimonial {
+    padding: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    div.testimonial {
+        float: left;
+        width: 33.3%;
+    }
+}
+
+blockquote {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    position: relative;
+    margin: 0 0 10px 0;
+    padding-bottom: 20px;
+}
+
+blockquote p {
+    font-size: 1em!important;
+    font-family: 'PT Sans', sans-serif;
+    text-align: left;
+    padding: 0 20px 0 65px;
+}
+
+blockquote p::before {
+    content: '\201c';
+    position: absolute;
+    font-size: 8rem;
+    left: 16px;
+    top: 8px;
+    color: #fe4918;
+    line-height: 1;
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
