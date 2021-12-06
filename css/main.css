@@ -210,6 +210,15 @@ h3 {
     color: #fe4918;
 }
 
+.button.transparente {
+    background-color: transparent;
+    border: solid 1px #ffffff;
+}
+
+.button.transparente:hover {
+    border: solid 1px #fe4918;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -751,6 +760,38 @@ footer.info-testimonial cite span {
     color: black;
     display: block;
     text-transform: none;
+}
+
+
+/**Newsletter**/
+
+div.newsletter {
+    position: relative;
+    height: auto;
+}
+
+div.newsletter::before {
+    background-image: url(../img/bg-newsletter.jpg);
+    content: '';
+}
+
+div.newsletter .contenido {
+    padding: 100px 0;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+
+div.newsletter .contenido p {
+    text-transform: lowercase;
+    font-size: 1.6em;
+}
+
+div.newsletter .contenido h3 {
+    color: #ffffff;
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
 }
 
 
