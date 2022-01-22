@@ -28,7 +28,10 @@
         const botonRegistro = document.getElementById('btn-registro');
         const resultado = document.getElementById('lista-productos');
 
+        //Extras
 
+        let cantRemeras = document.getElementById('remera_evento');
+        let cantGorras = document.getElementById('gorra_evento');
 
         calcular.addEventListener('click', calcularMontos);
 
@@ -39,13 +42,22 @@
                 regalo.focus();
 
             } else {
-                let valorDia = 700,
-                    ValorDosDias = 1300,
-                    ValorBoletoCompleto = 1800;
+                let valorUnDia = 700;
+                let valorDosDias = 1300;
+                let valorBoletoCompleto = 1800;
+                let valorRemera = (1000 * .93);
+                let valorGorra = 600;
+                let totalAPagar = (valorUnDia * (parseInt(paseDia.value, 10) || 0) + (valorDosDias * (parseInt(paseDosDias.value, 10) || 0)) + (valorBoletoCompleto * (parseInt(paseCompleto.value, 10) || 0)) + (valorRemera * (parseInt(cantRemeras.value, 10) || 0)) + (valorGorra * (parseInt(cantGorras.value, 10) || 0)));
 
+                console.log(totalAPagar);
 
-                let totalAPagar = (valorDia * paseDia.value) + (ValorDosDias * paseDosDias.value) + (ValorBoletoCompleto * paseCompleto.value)
-                console.log(totalAPagar)
+                let listadoProductos = [];
+
+                listadoProductos.push(('Pases por día: ') + (parseInt(paseDia.value, 10) || 0));
+                listadoProductos.push(('Pases por dos días: ') + (parseInt(paseDosDias.value, 10) || 0));
+                listadoProductos.push(('Pases Completos: ') + (parseInt(paseCompleto.value, 10) || 0));
+
+                //console.log(listadoProductos);
 
 
             }
