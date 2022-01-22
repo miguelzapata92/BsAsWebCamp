@@ -1,5 +1,10 @@
 (function() {
     "use strict";
+
+
+
+    let regalo = document.getElementById('regalo');
+
     document.addEventListener('DOMContentLoaded', function() {
 
         //Campos datos usuarios
@@ -24,6 +29,28 @@
         const resultado = document.getElementById('lista-productos');
 
 
+
+        calcular.addEventListener('click', calcularMontos);
+
+        function calcularMontos(event) {
+            event.preventDefault();
+            if (regalo.value === '') {
+                alert("Debes elegir un regalo");
+                regalo.focus();
+
+            } else {
+                let valorDia = 700,
+                    ValorDosDias = 1300,
+                    ValorBoletoCompleto = 1800;
+
+
+                let totalAPagar = (valorDia * paseDia.value) + (ValorDosDias * paseDosDias.value) + (ValorBoletoCompleto * paseCompleto.value)
+                console.log(totalAPagar)
+
+
+            }
+
+        }
     });
 
 })()
