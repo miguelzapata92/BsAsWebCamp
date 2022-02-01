@@ -27,6 +27,7 @@
         const errorDiv = document.getElementById('error');
         const botonRegistro = document.getElementById('btn-registro');
         let resumenCompra = document.getElementById('lista-productos');
+        let suma = document.getElementById('suma-total');
 
         //Extras
 
@@ -76,12 +77,12 @@
 
                 }
 
-
+                resumenCompra.style.display = "block";
                 resumenCompra.innerHTML = '';
                 for (let i = 0; i < listadoProductos.length; i++) {
                     resumenCompra.innerHTML += listadoProductos[i] + '<br/>';
                 }
-
+                suma.innerHTML = "$" + totalAPagar.toFixed(2);
             }
 
         }

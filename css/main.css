@@ -948,7 +948,7 @@ div.paquetes .tabla-precios {
 /* Resumen Registro*/
 
 .resumen p {
-    font-size: 1.2em;
+    font-size: 1.4em;
     text-transform: uppercase;
 }
 
@@ -980,6 +980,19 @@ div.paquetes .tabla-precios {
 .resumen input {
     display: block;
     margin: 10px auto;
+}
+
+#lista-productos {
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 20px;
+    display: none;
+}
+
+#suma-total {
+    font-size: 2.5em;
+    color: #fe4918;
+    text-align: center;
 }
 
 .orden select {
