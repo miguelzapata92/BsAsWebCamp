@@ -26,7 +26,7 @@
         const calcular = document.getElementById('calcular');
         const errorDiv = document.getElementById('error');
         const botonRegistro = document.getElementById('btn-registro');
-        const resultado = document.getElementById('lista-productos');
+        let resumenCompra = document.getElementById('lista-productos');
 
         //Extras
 
@@ -53,12 +53,34 @@
 
                 let listadoProductos = [];
 
-                listadoProductos.push(('Pases por día: ') + (parseInt(paseDia.value, 10) || 0));
-                listadoProductos.push(('Pases por dos días: ') + (parseInt(paseDosDias.value, 10) || 0));
-                listadoProductos.push(('Pases Completos: ') + (parseInt(paseCompleto.value, 10) || 0));
+                if (paseDia.value >= 1) {
+                    listadoProductos.push(('Pases por día: ') + (parseInt(paseDia.value, 10) || 0));
 
-                //console.log(listadoProductos);
+                }
 
+                if (paseDosDias.value >= 1) {
+                    listadoProductos.push(('Pases por dos días: ') + (parseInt(paseDosDias.value, 10) || 0));
+
+                }
+
+                if (paseCompleto.value >= 1) {
+                    listadoProductos.push(('Pases Completos: ') + (parseInt(paseCompleto.value, 10) || 0));
+
+                }
+                if (cantGorras.value >= 1) {
+                    listadoProductos.push(('Gorras: ') + (parseInt(cantGorras.value, 10) || 0));
+
+                }
+                if (cantRemeras.value >= 1) {
+                    listadoProductos.push(('Remeras: ') + (parseInt(cantRemeras.value, 10) || 0));
+
+                }
+
+
+                resumenCompra.innerHTML = '';
+                for (let i = 0; i < listadoProductos.length; i++) {
+                    resumenCompra.innerHTML += listadoProductos[i] + '<br/>';
+                }
 
             }
 
