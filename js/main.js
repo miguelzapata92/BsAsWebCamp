@@ -34,7 +34,12 @@
         let cantRemeras = document.getElementById('remera_evento');
         let cantGorras = document.getElementById('gorra_evento');
 
+        //Eventos
         calcular.addEventListener('click', calcularMontos);
+
+        paseDia.addEventListener('blur', mostrarDias);
+        paseDosDias.addEventListener('blur', mostrarDias);
+        paseCompleto.addEventListener('blur', mostrarDias);
 
         function calcularMontos(event) {
             event.preventDefault();
@@ -86,6 +91,30 @@
             }
 
         }
+
+
+        function mostrarDias() {
+            let boletoDia = parseInt(paseDia.value, 10) || 0;
+            let boletoDosDias = parseInt(paseDosDias.value, 10) || 0;
+            let boletoCompleto = parseInt(paseCompleto.value, 10) || 0;
+
+            let diasElegidos = [];
+
+            if (boletoDia >= 1) {
+                diasElegidos.push('viernes');
+            }
+            if (boletoDosDias >= 1) {
+                diasElegidos.push('viernes', 'sabado');
+            }
+            if (boletoCompleto >= 1) {
+                diasElegidos.push('viernes', 'sabado', 'domingo');
+            }
+
+            for (let i = 0; i < diasElegidos.length; i++) {
+                document.getElementById(diasElegidos[i]).style.display = 'block'
+            }
+        }
+
     });
 
 })()
