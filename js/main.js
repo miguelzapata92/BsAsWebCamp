@@ -7,6 +7,17 @@
 
     document.addEventListener('DOMContentLoaded', function() {
 
+        //Mapa
+        var map = L.map('mapa').setView([-34.61344, -58.359976], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([51.5, -0.09]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();
+
         //Campos datos usuarios
         const nombre = document.getElementById('nombre');
         const apellido = document.getElementById('apellido');
