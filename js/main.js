@@ -1,3 +1,14 @@
+//Mapa
+var map = L.map('mapa').setView([-34.61344, -58.359976], 16);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([-34.61344, -58.359976]).addTo(map)
+    .bindPopup('BsAs WebCamp')
+    .openPopup();
+
 (function() {
     "use strict";
 
@@ -7,16 +18,6 @@
 
     document.addEventListener('DOMContentLoaded', function() {
 
-        //Mapa
-        var map = L.map('mapa').setView([-34.61344, -58.359976], 16);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([-34.61344, -58.359976]).addTo(map)
-            .bindPopup('BsAs WebCamp')
-            .openPopup();
 
         //Campos datos usuarios
         const nombre = document.getElementById('nombre');
@@ -129,3 +130,22 @@
     });
 
 })()
+
+$(function() {
+
+    //Programa de Conferencias
+    $('.programa-evento .info-curso:first').show();
+    $('.menu-programa a:first').addClass('activo');
+
+    $('.menu-programa a').on('click', function() {
+        $('.menu-programa a').removeClass('activo');
+        $(this).addClass('activo');
+        $('.hiden').hide();
+
+        let enlace = $(this).attr('href');
+        $(enlace).fadeIn(1000);
+
+        return false;
+
+    })
+});

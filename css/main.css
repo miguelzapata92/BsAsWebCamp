@@ -512,6 +512,10 @@ div.detalle-evento p {
     font-size: 20px;
 }
 
+div.hiden {
+    display: none;
+}
+
 
 /**Invitados**/
 
