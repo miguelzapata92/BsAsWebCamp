@@ -934,6 +934,18 @@ p.copyright {
 /***INTERNAS***/
 
 
+/** Conferencias**/
+
+body.conferencia .navegacion-principal .activo {
+    border-bottom: solid 2px #fe4918;
+}
+
+div.galeria a {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
 /* REGISTRO*/
 
 form.registro h3 {
