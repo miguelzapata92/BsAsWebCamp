@@ -133,6 +133,10 @@ L.marker([-34.61344, -58.359976]).addTo(map)
 
 $(function() {
 
+    //Lettering
+
+    $('.website-name').lettering();
+
     //Programa de Conferencias
     $('.programa-evento .info-curso:first').show();
     $('.menu-programa a:first').addClass('activo');

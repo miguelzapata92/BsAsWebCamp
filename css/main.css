@@ -311,17 +311,68 @@ p.location {
     text-align: right;
 }
 
-h1.name-website {
+h1.website-name {
     font-size: 6vw;
     font-family: 'PT Sans', sans-serif;
 }
 
 @media only screen and (min-width: 768px) {
-    h1.name-website {
+    h1.website-name {
         text-transform: uppercase;
         font-size: 11vw;
         margin: 0;
         line-height: 1;
+    }
+}
+
+
+/** Lettering **/
+
+h1.website-name span {
+    position: relative;
+    text-shadow: 0 0 30px black
+}
+
+@media only screen and (min-width: 992px) {
+    .char1 {
+        top: 20px;
+        right: 20px;
+    }
+    .char2 {
+        top: 0px;
+        left: -20px;
+    }
+    .char3 {
+        top: 10px;
+        right: 20px;
+    }
+    .char4 {
+        top: 5px;
+        right: 10px;
+    }
+    .char5 {
+        top: 7px;
+        left: 0px;
+    }
+    .char6 {
+        top: 0px;
+        left: 10px;
+    }
+    .char7 {
+        top: 10px;
+        left: 10px;
+    }
+    .char8 {
+        top: 0px;
+        left: 20px;
+    }
+    .char9 {
+        top: 10px;
+        right: 0px;
+    }
+    .char10 {
+        top: 20px;
+        right: 20px;
     }
 }
 
