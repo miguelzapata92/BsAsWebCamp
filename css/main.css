@@ -379,6 +379,14 @@ h1.website-name span {
 
 /**Barra**/
 
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
 div.menu-principal {
     background-color: #353535;
     padding: 20px 0;
