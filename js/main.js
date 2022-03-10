@@ -185,5 +185,10 @@ $(function() {
     $('.resumen-evento li:nth-child(4) p').animateNumber({ number: 9 }, 1200)
 
     //Cuenta regresiva
-    $('.cuenta-regresiva').countdown()
+    $('.cuenta-regresiva').countdown('2022/12/10 13:00:00', function(event) {
+        $('#dias').html(event.strftime('%D'));
+        $('#horas').html(event.strftime('%H'));
+        $('#minutos').html(event.strftime('%M'));
+        $('#segundos').html(event.strftime('%S'));
+    });
 });
