@@ -1,14 +1,3 @@
-//Mapa
-var map = L.map('mapa').setView([-34.61344, -58.359976], 16);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-L.marker([-34.61344, -58.359976]).addTo(map)
-    .bindPopup('BsAs WebCamp')
-    .openPopup();
-
 (function() {
     "use strict";
 
@@ -128,6 +117,16 @@ L.marker([-34.61344, -58.359976]).addTo(map)
         }
 
     });
+    //Mapa
+    var map = L.map('mapa').setView([-34.61344, -58.359976], 16);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([-34.61344, -58.359976]).addTo(map)
+        .bindPopup('BsAs WebCamp')
+        .openPopup();
 
 })()
 
@@ -185,5 +184,10 @@ $(function() {
     $('.resumen-evento li:nth-child(4) p').animateNumber({ number: 9 }, 1200)
 
     //Cuenta regresiva
-    $('.cuenta-regresiva').countdown()
+    $('.cuenta-regresiva').countdown('2022/12/10 13:00:00', function(event) {
+        $('#dias').html(event.strftime('%D'));
+        $('#horas').html(event.strftime('%H'));
+        $('#minutos').html(event.strftime('%M'));
+        $('#segundos').html(event.strftime('%S'));
+    });
 });
