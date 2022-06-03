@@ -58,7 +58,9 @@
 
 
             <div class="logo">
+                <a href="index.php">
                 <img src="img/logo.svg" alt="logo">
+                </a>
             </div>
             <div class="mobile-menu">
                 <span></span>
