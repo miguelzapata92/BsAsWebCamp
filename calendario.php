@@ -23,12 +23,28 @@
         ?>
         <div class="calendario">
             <?php 
-               while ($eventos = $resultado->fetch_assoc() ) { ?>
-                    <pre>
-                         <?php var_dump($eventos); ?>
-                    </pre>
-               <?php } ; ?> 
-            
+                $calendario = array();
+               while ($eventos = $resultado->fetch_assoc() ) { 
+
+                    // obtiene la fecha del evento
+
+                    $fecha = $eventos['fecha_evento'];
+                   $evento = array(
+                       'titulo' => $eventos['nombre_evento'],
+                       'fecha' => $eventos['fecha_evento'],
+                       'hora' => $eventos['hora_evento'],
+                       'categoria' => $eventos['cat_evento'],
+                       'invitado' => $eventos['nombre_invitado'] . " " . $eventos['apellido_invitado']
+                   );
+
+                   //estp agrupa los eventos que sean de la misma fecha
+                   $calendario[$fecha][] = $evento;
+                   ?>
+                  
+            <?php } ; //while de fetch assoc ?> 
+            <pre>
+                        <?php var_dump($calendario); ?>
+            </pre>
         </div>
         <?php 
             $conn->close();
