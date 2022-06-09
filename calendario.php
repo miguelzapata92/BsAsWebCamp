@@ -14,7 +14,7 @@
                 $sql .= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";
                 $sql .= " INNER JOIN invitados ";
                 $sql .= " ON eventos.id_inv = invitados.id_invitado ";
-                $sql .= " ORDER BY evento_id ";
+                $sql .= " ORDER BY evento_id "; 
                 $resultado = $conn->query($sql);
             } catch (\Exception $e){
                 echo $e->getMessage();
@@ -42,6 +42,21 @@
                    ?>
                   
             <?php } ; //while de fetch assoc ?> 
+
+            <?php
+                //Imprime todos los arreglos
+                foreach($calendario as $dia => $lista_eventos) { ?>
+                    <h3>
+                        <i class= "fa fa-calendar" ></i>
+                        
+                        <?php 
+                            setlocale(LC_TIME, 'spanish');
+                            echo strftime("%A, %d de %B, %Y", strtotime($dia));
+                        ?>
+                    </h3>
+                    
+
+              <?php  } ?>
             <pre>
                         <?php var_dump($calendario); ?>
             </pre>
