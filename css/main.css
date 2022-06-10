@@ -1098,6 +1098,19 @@ div.paquetes .tabla-precios {
 }
 
 
+/** Calendario **/
+
+div.calendario::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+h2.asd {
+    background-color: red;
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
